@@ -1,15 +1,16 @@
 package fr.sg.kata;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FooBarQix {
 
-    public String transformNumbers(List<Integer> numbers){
-        StringBuilder sb = new StringBuilder();
+    public List<String> transformNumbers(List<Integer> numbers){
+        List<String> listNumbers = new ArrayList<>();
         for (Integer number : numbers) {
-            sb = sb.append(evaluateDivisibleRules(number));
+            listNumbers.add(evaluateDivisibleRules(number));
         }
-        return sb.toString();
+        return listNumbers;
     }
 
     private String evaluateDivisibleRules (Integer number) {
