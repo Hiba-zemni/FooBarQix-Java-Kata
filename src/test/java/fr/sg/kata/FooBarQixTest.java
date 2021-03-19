@@ -32,7 +32,7 @@ public class FooBarQixTest {
     }
 
     @Test
-    public void shouldReturnFooIfNumberIs3(){
+    public void shouldReturnFooFooIfNumberIs3(){
         numbers = new ArrayList<>();
         numbers.add(3);
         assertEquals("FooFoo", fooBarQix.transformNumbers(numbers));
@@ -68,27 +68,27 @@ public class FooBarQixTest {
     }
 
     @Test
-    public void shouldReturn12FooIfNumberIsFrom1To3(){
+    public void shouldReturn12FooFooIfNumberIsFrom1To3(){
         numbers = new ArrayList<>();
         numbers.add(1);
         numbers.add(2);
         numbers.add(3);
-        assertEquals("12Foo", fooBarQix.transformNumbers(numbers));
+        assertEquals("12FooFoo", fooBarQix.transformNumbers(numbers));
     }
 
     @Test
-    public void shouldReturn12FooFoo4BarBarIfNumberIsFrom1To5(){
+    public void shouldReturn12FooFoo4BarIfNumberIsFrom1To5(){
         numbers = new ArrayList<>();
         numbers.add(1);
         numbers.add(2);
         numbers.add(3);
         numbers.add(4);
         numbers.add(5);
-        assertEquals("12Foo4Bar", fooBarQix.transformNumbers(numbers));
+        assertEquals("12FooFoo4Bar", fooBarQix.transformNumbers(numbers));
     }
 
     @Test
-    public void shouldReturn12FooFoo4BarBarFooQix8FooBarIfNumberIsFrom1To10(){
+    public void shouldReturn12FooFoo4BarFoo78FooBarIfNumberIsFrom1To10(){
         numbers = new ArrayList<>();
         numbers.add(1);
         numbers.add(2);
@@ -100,6 +100,6 @@ public class FooBarQixTest {
         numbers.add(8);
         numbers.add(9);
         numbers.add(10);
-        assertEquals("12Foo4BarFoo78FooBar", fooBarQix.transformNumbers(numbers));
+        assertEquals("12FooFoo4BarFoo78FooBar", fooBarQix.transformNumbers(numbers));
     }
 }
