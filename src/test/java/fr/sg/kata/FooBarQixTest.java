@@ -22,4 +22,9 @@ public class FooBarQixTest {
     public void shouldReturn2IfNumberIs2(){
         assertEquals("2", fooBarQix.transformNumbers(2));
     }
+
+    @Test
+    public void shouldReturnFooIfNumberIs3(){
+        assertEquals("Foo", fooBarQix.transformNumbers(3));
+    }
 }
