@@ -35,7 +35,7 @@ public class FooBarQixTest {
     public void shouldReturnFooIfNumberIs3(){
         numbers = new ArrayList<>();
         numbers.add(3);
-        assertEquals("Foo", fooBarQix.transformNumbers(numbers));
+        assertEquals("FooFoo", fooBarQix.transformNumbers(numbers));
     }
 
     @Test
