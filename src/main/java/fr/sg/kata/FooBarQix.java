@@ -1,13 +1,19 @@
 package fr.sg.kata;
 
+import java.util.List;
+
 public class FooBarQix {
 
-    public String transformNumbers(int number1, int number2){
-        if (number1 % 3 == 0)
-            return "Foo";
-        if (number1  % 5 == 0)
-            return "Bar";
-        return String.valueOf(number1);
+    public String transformNumbers(List<Integer> numbers){
+        String result ="";
+        for (Integer number : numbers) {
+            if (number % 3 == 0)
+                result += "Foo";
+           else if (number  % 5 == 0)
+                result += "Bar";
+            else result += String.valueOf(number);
+        }
+        return result;
 
     }
 }
