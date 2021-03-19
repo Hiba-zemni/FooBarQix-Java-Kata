@@ -32,4 +32,9 @@ public class FooBarQixTest {
     public void shouldReturnFooIfNumberIs6(){
         assertEquals("Foo", fooBarQix.transformNumbers(6));
     }
+
+    @Test
+    public void shouldReturnBarIfNumberIs5(){
+        assertEquals("Bar", fooBarQix.transformNumbers(5));
+    }
 }
