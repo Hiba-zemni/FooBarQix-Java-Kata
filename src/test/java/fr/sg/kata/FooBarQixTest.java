@@ -27,4 +27,9 @@ public class FooBarQixTest {
     public void shouldReturnFooIfNumberIs3(){
         assertEquals("Foo", fooBarQix.transformNumbers(3));
     }
+
+    @Test
+    public void shouldReturnFooIfNumberIs6(){
+        assertEquals("Foo", fooBarQix.transformNumbers(6));
+    }
 }
