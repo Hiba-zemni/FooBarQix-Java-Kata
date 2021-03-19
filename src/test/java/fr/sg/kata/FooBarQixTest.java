@@ -46,10 +46,10 @@ public class FooBarQixTest {
     }
 
     @Test
-    public void shouldReturnBarIfNumberIs5(){
+    public void shouldReturnBarBarIfNumberIs5(){
         numbers = new ArrayList<>();
         numbers.add(5);
-        assertEquals("Bar", fooBarQix.transformNumbers(numbers));
+        assertEquals("BarBar", fooBarQix.transformNumbers(numbers));
     }
 
     @Test
@@ -84,11 +84,11 @@ public class FooBarQixTest {
         numbers.add(3);
         numbers.add(4);
         numbers.add(5);
-        assertEquals("12FooFoo4Bar", fooBarQix.transformNumbers(numbers));
+        assertEquals("12FooFoo4BarBar", fooBarQix.transformNumbers(numbers));
     }
 
     @Test
-    public void shouldReturn12FooFoo4BarFoo78FooBarIfNumberIsFrom1To10(){
+    public void shouldReturn12FooFoo4BarFooQix8FooBarIfNumberIsFrom1To10(){
         numbers = new ArrayList<>();
         numbers.add(1);
         numbers.add(2);
@@ -100,6 +100,13 @@ public class FooBarQixTest {
         numbers.add(8);
         numbers.add(9);
         numbers.add(10);
-        assertEquals("12FooFoo4BarFoo78FooBar", fooBarQix.transformNumbers(numbers));
+        assertEquals("12FooFoo4BarBarFooQix8FooBar", fooBarQix.transformNumbers(numbers));
+    }
+
+    @Test
+    public void shouldReturnQixIfNumberIs7(){
+        numbers = new ArrayList<>();
+        numbers.add(7);
+        assertEquals("Qix", fooBarQix.transformNumbers(numbers));
     }
 }
