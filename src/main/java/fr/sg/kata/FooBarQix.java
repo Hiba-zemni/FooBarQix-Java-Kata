@@ -21,9 +21,7 @@ public class FooBarQix {
             sb.append("Bar");
         }
         sb = sb.append(evaluateContainsRules(number));
-        if (sb.length() == 0)
-            return String.valueOf(number);
-        return sb.toString();
+        return getTransformedNumber(number, sb);
 
     }
 
@@ -41,6 +39,12 @@ public class FooBarQix {
             }
         }
         return sb;
+    }
+
+    private String getTransformedNumber(int number, StringBuilder sb) {
+        if (sb.length() == 0)
+            return String.valueOf(number);
+        return sb.toString();
     }
 
 
