@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FooBarQixTest {
@@ -108,5 +109,40 @@ public class FooBarQixTest {
         numbers = new ArrayList<>();
         numbers.add(7);
         assertEquals("Qix", fooBarQix.transformNumbers(numbers));
+    }
+
+    @Test
+    public void shouldReturnFooBarIfNumberIs51(){
+        numbers = new ArrayList<>();
+        numbers.add(51);
+        assertEquals("FooBar", fooBarQix.transformNumbers(numbers));
+    }
+
+    @Test
+    public void shouldReturnBarFooIfNumberIs53(){
+        numbers = new ArrayList<>();
+        numbers.add(53);
+        assertEquals("BarFoo", fooBarQix.transformNumbers(numbers));
+    }
+
+    @Test
+    public void shouldReturnFooIfNumberIs13(){
+        numbers = new ArrayList<>();
+        numbers.add(13);
+        assertEquals("Foo", fooBarQix.transformNumbers(numbers));
+    }
+
+    @Test
+    public void shouldReturnFooBarBarIfNumberIs15(){
+        numbers = new ArrayList<>();
+        numbers.add(15);
+        assertEquals("FooBarBar", fooBarQix.transformNumbers(numbers));
+    }
+
+    @Test
+    public void shouldReturnFooBarBarIfNumberIs27(){
+        numbers = new ArrayList<>();
+        numbers.add(27);
+        assertEquals("FooQix", fooBarQix.transformNumbers(numbers));
     }
 }
