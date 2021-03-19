@@ -5,6 +5,6 @@ public class FooBarQix {
     public String transformNumbers(int number){
         if (number == 1)
             return "1";
-        return "2";
+        return String.valueOf(number);
     }
 }
