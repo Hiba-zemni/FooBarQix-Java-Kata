@@ -62,9 +62,8 @@ public class FooBarQixTest {
     @Test
     public void shouldReturn12FooFooIfNumberIsFrom1To3(){
         numbers = new ArrayList<>();
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
+        for(int i =1; i<=3; i++)
+            numbers.add(i);
         expectedNumbers = new String[]{"1", "2", "FooFoo"};
         assertArrayEquals(expectedNumbers, fooBarQix.transformNumbers(numbers).toArray());
     }
@@ -72,11 +71,8 @@ public class FooBarQixTest {
     @Test
     public void shouldReturn12FooFoo4BarIfNumberIsFrom1To5(){
         numbers = new ArrayList<>();
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
-        numbers.add(4);
-        numbers.add(5);
+        for(int i =1; i<=5; i++)
+            numbers.add(i);
         expectedNumbers = new String[]{"1", "2", "FooFoo", "4", "BarBar"};
         assertArrayEquals(expectedNumbers, fooBarQix.transformNumbers(numbers).toArray());
     }
@@ -84,16 +80,8 @@ public class FooBarQixTest {
     @Test
     public void shouldReturn12FooFoo4BarFooQix8FooBarIfNumberIsFrom1To10(){
         numbers = new ArrayList<>();
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
-        numbers.add(4);
-        numbers.add(5);
-        numbers.add(6);
-        numbers.add(7);
-        numbers.add(8);
-        numbers.add(9);
-        numbers.add(10);
+        for(int i =1; i<=10; i++)
+            numbers.add(i);
         expectedNumbers = new String[]{"1", "2", "FooFoo", "4", "BarBar", "Foo", "Qix", "8", "Foo", "Bar"};
         assertArrayEquals(expectedNumbers, fooBarQix.transformNumbers(numbers).toArray());
     }
