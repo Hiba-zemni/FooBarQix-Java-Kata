@@ -2,32 +2,32 @@ package fr.sg.kata;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class FooBarQix {
 
     public List<String> transformNumbers(List<Integer> numbers){
-        List<String> listNumbers = new ArrayList<>();
-        for (Integer number : numbers) {
-            listNumbers.add(evaluateDivisibleRules(number));
-        }
-        return listNumbers;
+       return numbers.stream().map(number ->transform(number)).collect(Collectors.toList());
     }
 
-    private String evaluateDivisibleRules (Integer number) {
+     String transform(int number){
         StringBuilder sb = new StringBuilder();
+        evaluateDivisibleRules(sb, number);
+        evaluateContainsRules(sb, number);
+        return getTransformedNumber(number, sb);
+    }
+
+    private String evaluateDivisibleRules (StringBuilder sb, Integer number) {
         if (number  % 3 == 0) {
             sb = sb.append("Foo");
         }
         if(number % 5 == 0) {
             sb.append("Bar");
         }
-        sb = sb.append(evaluateContainsRules(number));
         return getTransformedNumber(number, sb);
-
     }
 
-    private StringBuilder evaluateContainsRules(Integer number) {
-        StringBuilder sb = new StringBuilder();
+    private StringBuilder evaluateContainsRules(StringBuilder sb, Integer number) {
         for (char c : String.valueOf(number).toCharArray()) {
             if (c == '3'){
                 sb = sb.append("Foo");

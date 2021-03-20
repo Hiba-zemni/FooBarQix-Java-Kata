@@ -22,50 +22,32 @@ public class FooBarQixTest {
 
     @Test
     public void shouldReturn1IfNumberIs1(){
-        numbers = new ArrayList<>();
-        numbers.add(1);
-        expectedNumbers = new String[]{"1"};
-        assertArrayEquals(expectedNumbers, fooBarQix.transformNumbers(numbers).toArray());
+        assertEquals("1", fooBarQix.transform(1));
     }
 
     @Test
     public void shouldReturn2IfNumberIs2(){
-        numbers = new ArrayList<>();
-        numbers.add(2);
-        expectedNumbers = new String[]{"2"};
-        assertArrayEquals(expectedNumbers, fooBarQix.transformNumbers(numbers).toArray());
+        assertEquals("2", fooBarQix.transform(2));
     }
 
     @Test
     public void shouldReturnFooFooIfNumberIs3(){
-        numbers = new ArrayList<>();
-        numbers.add(3);
-        expectedNumbers = new String[]{"FooFoo"};
-        assertArrayEquals(expectedNumbers, fooBarQix.transformNumbers(numbers).toArray());
+        assertEquals("FooFoo", fooBarQix.transform(3));
     }
 
     @Test
     public void shouldReturnFooIfNumberIs6(){
-        numbers = new ArrayList<>();
-        numbers.add(6);
-        expectedNumbers = new String[]{"Foo"};
-        assertArrayEquals(expectedNumbers, fooBarQix.transformNumbers(numbers).toArray());
+        assertEquals("Foo", fooBarQix.transform(6));
     }
 
     @Test
     public void shouldReturnBarBarIfNumberIs5(){
-        numbers = new ArrayList<>();
-        numbers.add(5);
-        expectedNumbers = new String[]{"BarBar"};
-        assertArrayEquals(expectedNumbers, fooBarQix.transformNumbers(numbers).toArray());
+        assertEquals("BarBar", fooBarQix.transform(5));
     }
 
     @Test
     public void shouldReturnBarIfNumberIs10(){
-        numbers = new ArrayList<>();
-        numbers.add(10);
-        expectedNumbers = new String[]{"Bar"};
-        assertArrayEquals(expectedNumbers, fooBarQix.transformNumbers(numbers).toArray());
+        assertEquals("Bar", fooBarQix.transform(10));
     }
 
     @Test
@@ -118,49 +100,32 @@ public class FooBarQixTest {
 
     @Test
     public void shouldReturnQixIfNumberIs7(){
-        numbers = new ArrayList<>();
-        numbers.add(7);
-        expectedNumbers = new String[]{"Qix"};
-        assertArrayEquals(expectedNumbers, fooBarQix.transformNumbers(numbers).toArray());
+        assertEquals("Qix", fooBarQix.transform(7));
     }
 
     @Test
     public void shouldReturnFooBarIfNumberIs51(){
-        numbers = new ArrayList<>();
-        numbers.add(51);
-        expectedNumbers = new String[]{"FooBar"};
-        assertArrayEquals(expectedNumbers, fooBarQix.transformNumbers(numbers).toArray());
+        assertEquals("FooBar", fooBarQix.transform(51));
     }
 
     @Test
     public void shouldReturnBarFooIfNumberIs53(){
-        numbers = new ArrayList<>();
-        numbers.add(53);
-        expectedNumbers = new String[]{"BarFoo"};
-        assertArrayEquals(expectedNumbers, fooBarQix.transformNumbers(numbers).toArray());
+        assertEquals("BarFoo", fooBarQix.transform(53));
+
     }
 
     @Test
     public void shouldReturnFooIfNumberIs13(){
-        numbers = new ArrayList<>();
-        numbers.add(13);
-        expectedNumbers = new String[]{"Foo"};
-        assertArrayEquals(expectedNumbers, fooBarQix.transformNumbers(numbers).toArray());
+        assertEquals("Foo", fooBarQix.transform(13));
     }
 
     @Test
     public void shouldReturnFooBarBarIfNumberIs15(){
-        numbers = new ArrayList<>();
-        numbers.add(15);
-        expectedNumbers = new String[]{"FooBarBar"};
-        assertArrayEquals(expectedNumbers, fooBarQix.transformNumbers(numbers).toArray());
+        assertEquals("FooBarBar", fooBarQix.transform(15));
     }
 
     @Test
     public void shouldReturnFooBarBarIfNumberIs27(){
-        numbers = new ArrayList<>();
-        numbers.add(27);
-        expectedNumbers = new String[]{"FooQix"};
-        assertArrayEquals(expectedNumbers, fooBarQix.transformNumbers(numbers).toArray());
+        assertEquals("FooQix", fooBarQix.transform(27));
     }
 }
