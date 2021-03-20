@@ -18,26 +18,21 @@ public class FooBarQix {
     }
 
     private String evaluateDivisibleRules (StringBuilder sb, Integer number) {
-        if (number  % 3 == 0) {
+        if (number  % 3 == 0)
             sb = sb.append("Foo");
-        }
-        if(number % 5 == 0) {
+        if(number % 5 == 0)
             sb.append("Bar");
-        }
         return getTransformedNumber(number, sb);
     }
 
     private StringBuilder evaluateContainsRules(StringBuilder sb, Integer number) {
         for (char c : String.valueOf(number).toCharArray()) {
-            if (c == '3'){
-                sb = sb.append("Foo");
-            }
-            if (c == '5'){
-                sb = sb.append("Bar");
-            }
-            if (c == '7'){
-                sb = sb.append("Qix");
-            }
+            if (c == '3')
+               sb.append("Foo");
+            if (c == '5')
+                sb.append("Bar");
+            if (c == '7')
+                sb.append("Qix");
         }
         return sb;
     }
